@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 /// Protocol to help with loading a view from a Nib.
 /// NOTE on implementing: Views that implement this must be declared final.
 /// The default implementation is that the nibName matches the class name, 
@@ -27,7 +26,6 @@ protocol NibLoadable {
     
 }
 
-
 /// Default implementation
 /// nibName matches the class name, only situations other than this need to be explicitly declared.
 extension NibLoadable {
@@ -35,9 +33,7 @@ extension NibLoadable {
     static var nibName: String {
         return String(self)
     }
-    
 }
-
 
 extension NibLoadable where Self: UIView {
     
@@ -45,9 +41,7 @@ extension NibLoadable where Self: UIView {
         return UINib(nibName: self.nibName, bundle: nil)
     }
     
-    
     static func loadFromNib() -> Self {
         return nib().instantiateWithOwner(self, options: nil).first as! Self
     }
-
 }
