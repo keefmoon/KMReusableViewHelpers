@@ -12,7 +12,7 @@ import UIKit
 /// NOTE on implementing: Views that implement this must be declared final.
 /// The default implementation is that the nibName matches the class name, 
 /// only situations other than this need to be explicitly declared.
-protocol NibLoadable {
+public protocol NibLoadable {
     
     /// Nib name
     static var nibName: String { get }
@@ -28,14 +28,14 @@ protocol NibLoadable {
 
 /// Default implementation
 /// nibName matches the class name, only situations other than this need to be explicitly declared.
-extension NibLoadable {
+public extension NibLoadable {
     
     static var nibName: String {
         return String(self)
     }
 }
 
-extension NibLoadable where Self: UIView {
+public extension NibLoadable where Self: UIView {
     
     static func nib() -> UINib {
         return UINib(nibName: self.nibName, bundle: nil)
