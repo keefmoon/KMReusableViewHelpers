@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "KMReusableViewHelpers"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Some helpful extensions for working with reusable and nib-based views"
 
   # This description is used to generate tags and improve search results.
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/keefmoon/KMReusableViewHelpers.git", :tag => 'current' }
+  s.source       = { :git => "https://github.com/keefmoon/KMReusableViewHelpers.git", :tag => '1.1.0' }
   s.module_name = "ReusableViewHelpers"
 
 

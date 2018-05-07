@@ -19,7 +19,7 @@ public protocol Reusable {
 public extension Reusable {
     
     static var reuseIdentifier: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 

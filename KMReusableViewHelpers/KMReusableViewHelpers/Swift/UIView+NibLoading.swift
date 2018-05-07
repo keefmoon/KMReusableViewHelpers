@@ -31,7 +31,7 @@ public protocol NibLoadable {
 public extension NibLoadable {
     
     static var nibName: String {
-        return String(self)
+        return String(describing: self)
     }
 }
 
@@ -42,6 +42,6 @@ public extension NibLoadable where Self: UIView {
     }
     
     static func loadFromNib() -> Self {
-        return nib().instantiateWithOwner(self, options: nil).first as! Self
+        return nib().instantiate(withOwner: self, options: nil).first as! Self
     }
 }

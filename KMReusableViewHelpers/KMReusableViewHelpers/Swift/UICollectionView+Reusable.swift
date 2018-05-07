@@ -13,7 +13,7 @@ public enum SupplementaryViewKind {
     case Footer
     case Custom(String)
     
-    private var kindString: String {
+    fileprivate var kindString: String {
         switch self {
         case .Header: return UICollectionElementKindSectionHeader
         case .Footer: return UICollectionElementKindSectionFooter
@@ -24,19 +24,19 @@ public enum SupplementaryViewKind {
 
 public extension UICollectionView {
     
-    public func register<T: ReuseRegisterable where T: UICollectionViewCell>(cellType: T.Type) {
-        registerNib(cellType.nib(), forCellWithReuseIdentifier: cellType.reuseIdentifier)
+    public func register<T: ReuseRegisterable>(cellType: T.Type) where T: UICollectionViewCell {
+        register(cellType.nib(), forCellWithReuseIdentifier: cellType.reuseIdentifier)
     }
     
-    public func register<T: ReuseRegisterable where T: UICollectionReusableView>(cellType: T.Type, ofKind kind: SupplementaryViewKind) {
-        registerNib(cellType.nib(), forSupplementaryViewOfKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier)
+    public func register<T: ReuseRegisterable>(cellType: T.Type, ofKind kind: SupplementaryViewKind) where T: UICollectionReusableView {
+        register(cellType.nib(), forSupplementaryViewOfKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier)
     }
     
-    public func dequeue<T: Reusable where T: UICollectionViewCell>(cellType: T.Type, forIndexPath indexPath: NSIndexPath) -> T {
-        return dequeueReusableCellWithReuseIdentifier(cellType.reuseIdentifier, forIndexPath: indexPath) as! T
+    public func dequeue<T: Reusable>(cellType: T.Type, forIndexPath indexPath: NSIndexPath) -> T where T: UICollectionViewCell {
+        return dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath as IndexPath) as! T
     }
     
-    public func dequeue<T: Reusable where T: UICollectionReusableView>(cellType: T.Type, ofKind kind: SupplementaryViewKind, forIndexPath indexPath: NSIndexPath) -> T {
-        return dequeueReusableSupplementaryViewOfKind(kind.kindString, withReuseIdentifier: cellType.reuseIdentifier, forIndexPath: indexPath) as! T
+    public func dequeue<T: Reusable>(cellType: T.Type, ofKind kind: SupplementaryViewKind, forIndexPath indexPath: NSIndexPath) -> T where T: UICollectionReusableView {
+        return dequeueReusableSupplementaryView(ofKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier, for: indexPath as IndexPath) as! T
     }
 }
