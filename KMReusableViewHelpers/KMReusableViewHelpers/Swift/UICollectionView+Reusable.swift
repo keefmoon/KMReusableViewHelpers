@@ -9,15 +9,15 @@
 import UIKit
 
 public enum SupplementaryViewKind {
-    case Header
-    case Footer
-    case Custom(String)
+    case header
+    case footer
+    case custom(String)
     
     fileprivate var kindString: String {
         switch self {
-        case .Header: return UICollectionElementKindSectionHeader
-        case .Footer: return UICollectionElementKindSectionFooter
-        case .Custom(let customKind): return customKind
+        case .header: return UICollectionElementKindSectionHeader
+        case .footer: return UICollectionElementKindSectionFooter
+        case .custom(let customKind): return customKind
         }
     }
 }

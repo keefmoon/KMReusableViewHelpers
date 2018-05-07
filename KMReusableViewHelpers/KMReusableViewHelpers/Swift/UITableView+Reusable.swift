@@ -18,7 +18,7 @@ public extension UITableView {
         register(headerFooterType.nib(), forHeaderFooterViewReuseIdentifier: headerFooterType.reuseIdentifier)
     }
     
-    public func dequeue<T: Reusable>(cellType: T.Type, forIndexPath indexPath: NSIndexPath) -> T where T: UITableViewCell {
+    public func dequeue<T: Reusable>(cellType: T.Type, forIndexPath indexPath: IndexPath) -> T where T: UITableViewCell {
         return dequeueReusableCell(withIdentifier: cellType.reuseIdentifier, for: indexPath as IndexPath) as! T
     }
     
