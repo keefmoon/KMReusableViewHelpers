@@ -15,9 +15,10 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "KMReusableViewHelpers"
-  s.version      = "1.1.0"
-  s.summary      = "Some helpful extensions for working with reusable and nib-based views"
+  s.name          = "KMReusableViewHelpers"
+  s.version       = "1.1.0"
+  s.swift_version = "4.1"
+  s.summary       = "Some helpful extensions for working with reusable and nib-based views"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +26,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  Some helpful extensions for working with reusable and nib-based views
+  Some helpful extensions for working with reusable, nib-based views and table view and collection views
                    DESC
 
   s.homepage     = "https://github.com/keefmoon/KMReusableViewHelpers"
