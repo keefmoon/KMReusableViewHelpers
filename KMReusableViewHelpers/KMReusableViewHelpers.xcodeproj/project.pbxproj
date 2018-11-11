@@ -10,10 +10,10 @@
 		2F0AFB681CF257A50026F520 /* KMReusableViewHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F0AFB671CF257A50026F520 /* KMReusableViewHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2F0AFB6F1CF257A50026F520 /* KMReusableViewHelpers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0AFB641CF257A50026F520 /* KMReusableViewHelpers.framework */; };
 		2F0AFB741CF257A50026F520 /* KMReusableViewHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AFB731CF257A50026F520 /* KMReusableViewHelpersTests.swift */; };
-		2F0AFB811CF258200026F520 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AFB7F1CF258200026F520 /* UITableView+Reusable.swift */; };
-		2F0AFB821CF258200026F520 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AFB801CF258200026F520 /* UIView+NibLoading.swift */; };
-		2F0AFB841CF26B0C0026F520 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AFB831CF26B0C0026F520 /* Reusable.swift */; };
-		2F0AFB861CF26C4F0026F520 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0AFB851CF26C4F0026F520 /* UICollectionView+Reusable.swift */; };
+		2F13B9A92198F48C00639591 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13B9A52198F48C00639591 /* UICollectionView+Reusable.swift */; };
+		2F13B9AA2198F48C00639591 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13B9A62198F48C00639591 /* Reusable.swift */; };
+		2F13B9AB2198F48C00639591 /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13B9A72198F48C00639591 /* UIView+NibLoading.swift */; };
+		2F13B9AC2198F48C00639591 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F13B9A82198F48C00639591 /* UITableView+Reusable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,10 +33,10 @@
 		2F0AFB6E1CF257A50026F520 /* KMReusableViewHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KMReusableViewHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F0AFB731CF257A50026F520 /* KMReusableViewHelpersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMReusableViewHelpersTests.swift; sourceTree = "<group>"; };
 		2F0AFB751CF257A50026F520 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F0AFB7F1CF258200026F520 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
-		2F0AFB801CF258200026F520 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
-		2F0AFB831CF26B0C0026F520 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Reusable.swift; path = Swift/Reusable.swift; sourceTree = "<group>"; };
-		2F0AFB851CF26C4F0026F520 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		2F13B9A52198F48C00639591 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		2F13B9A62198F48C00639591 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		2F13B9A72198F48C00639591 /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
+		2F13B9A82198F48C00639591 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,7 @@
 		2F0AFB661CF257A50026F520 /* KMReusableViewHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				2F0AFB831CF26B0C0026F520 /* Reusable.swift */,
-				2F0AFB7E1CF258200026F520 /* Extensions */,
+				2F13B9A42198F48C00639591 /* Sources */,
 				2F0AFB671CF257A50026F520 /* KMReusableViewHelpers.h */,
 				2F0AFB691CF257A50026F520 /* Info.plist */,
 			);
@@ -96,15 +95,15 @@
 			path = KMReusableViewHelpersTests;
 			sourceTree = "<group>";
 		};
-		2F0AFB7E1CF258200026F520 /* Extensions */ = {
+		2F13B9A42198F48C00639591 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				2F0AFB801CF258200026F520 /* UIView+NibLoading.swift */,
-				2F0AFB7F1CF258200026F520 /* UITableView+Reusable.swift */,
-				2F0AFB851CF26C4F0026F520 /* UICollectionView+Reusable.swift */,
+				2F13B9A62198F48C00639591 /* Reusable.swift */,
+				2F13B9A52198F48C00639591 /* UICollectionView+Reusable.swift */,
+				2F13B9A72198F48C00639591 /* UIView+NibLoading.swift */,
+				2F13B9A82198F48C00639591 /* UITableView+Reusable.swift */,
 			);
-			name = Extensions;
-			path = Swift;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,9 +168,11 @@
 				TargetAttributes = {
 					2F0AFB631CF257A50026F520 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1010;
 					};
 					2F0AFB6D1CF257A50026F520 = {
 						CreatedOnToolsVersion = 7.3;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -215,10 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F0AFB811CF258200026F520 /* UITableView+Reusable.swift in Sources */,
-				2F0AFB861CF26C4F0026F520 /* UICollectionView+Reusable.swift in Sources */,
-				2F0AFB841CF26B0C0026F520 /* Reusable.swift in Sources */,
-				2F0AFB821CF258200026F520 /* UIView+NibLoading.swift in Sources */,
+				2F13B9AA2198F48C00639591 /* Reusable.swift in Sources */,
+				2F13B9AB2198F48C00639591 /* UIView+NibLoading.swift in Sources */,
+				2F13B9A92198F48C00639591 /* UICollectionView+Reusable.swift in Sources */,
+				2F13B9AC2198F48C00639591 /* UITableView+Reusable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dataninjitsu.KMReusableViewHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -386,6 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dataninjitsu.KMReusableViewHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -396,6 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dataninjitsu.KMReusableViewHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -406,6 +410,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dataninjitsu.KMReusableViewHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
