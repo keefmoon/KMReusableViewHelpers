@@ -99,8 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				2F13B9A62198F48C00639591 /* Reusable.swift */,
-				2F13B9A52198F48C00639591 /* UICollectionView+Reusable.swift */,
 				2F13B9A72198F48C00639591 /* UIView+NibLoading.swift */,
+				2F13B9A52198F48C00639591 /* UICollectionView+Reusable.swift */,
 				2F13B9A82198F48C00639591 /* UITableView+Reusable.swift */,
 			);
 			path = Sources;

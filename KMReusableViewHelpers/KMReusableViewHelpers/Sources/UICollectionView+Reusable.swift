@@ -32,11 +32,11 @@ public extension UICollectionView {
         register(cellType.nib(), forSupplementaryViewOfKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier)
     }
     
-    public func dequeue<T: Reusable>(cellType: T.Type, forIndexPath indexPath: NSIndexPath) -> T where T: UICollectionViewCell {
-        return dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath as IndexPath) as! T
+    public func dequeue<T: Reusable>(cellType: T.Type, forIndexPath indexPath: IndexPath) -> T where T: UICollectionViewCell {
+        return dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as! T
     }
     
-    public func dequeue<T: Reusable>(cellType: T.Type, ofKind kind: SupplementaryViewKind, forIndexPath indexPath: NSIndexPath) -> T where T: UICollectionReusableView {
-        return dequeueReusableSupplementaryView(ofKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier, for: indexPath as IndexPath) as! T
+    public func dequeue<T: Reusable>(cellType: T.Type, ofKind kind: SupplementaryViewKind, forIndexPath indexPath: IndexPath) -> T where T: UICollectionReusableView {
+        return dequeueReusableSupplementaryView(ofKind: kind.kindString, withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as! T
     }
 }
