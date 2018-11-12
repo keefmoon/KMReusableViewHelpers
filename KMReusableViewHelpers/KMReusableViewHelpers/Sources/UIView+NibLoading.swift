@@ -14,6 +14,9 @@ import UIKit
 /// only situations other than this need to be explicitly declared.
 public protocol NibLoadable {
     
+    /// Bundle that contains the nib
+    static var bundle: Bundle { get }
+    
     /// Nib name
     static var nibName: String { get }
     
@@ -37,8 +40,12 @@ public extension NibLoadable {
 
 public extension NibLoadable where Self: UIView {
     
+    static var bundle: Bundle {
+        return Bundle(for: self)
+    }
+    
     static func nib() -> UINib {
-        return UINib(nibName: self.nibName, bundle: nil)
+        return UINib(nibName: self.nibName, bundle: self.bundle)
     }
     
     static func loadFromNib() -> Self {
